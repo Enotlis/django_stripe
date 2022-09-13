@@ -120,8 +120,8 @@ USE_L10N = True
 
 USE_TZ = True
 
-SECRET_STRIP_KEY = os.getenv('SECRET_KEY')#'sk_test_51LgpO7AIatckRiORudCh5WkDzyJAtDxgghibisuPV2G0SHExVbVwyGle1nwJRZXg2XLO96XK2MRwwiuzg8RiNSr500iDfdR0aE'
-PUBLISH_STRIP_KEY = os.getenv('PUBLISH_KEY')#'pk_test_51LgpO7AIatckRiORebc3juC3O9MH7t3xgLi5CBdg27G7CHTTie9saYVKi8LsnftviymNDc47YFcfzlJfyxjtwgNK00ZrqExtP1'
+SECRET_STRIP_KEY = os.getenv('SECRET_KEY')
+PUBLISH_STRIP_KEY = os.getenv('PUBLISH_KEY')
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
