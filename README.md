@@ -33,7 +33,7 @@ docker-compose exec django python manage.py createsuperuser (создаете с
 
 Сервис
 ----------------------------
-`http://0.0.0.0:8000/admin/` - админ панель (user: admin, password: admin)
-`http://0.0.0.0:8000/buy/<item_id>` - купить товар
-`http://0.0.0.0:8000/item/<item_id>` - страница товара
+- `http://0.0.0.0:8000/admin/` - админ панель
+- `http://0.0.0.0:8000/buy/<item_id>` - купить товар
+- `http://0.0.0.0:8000/item/<item_id>` - страница товара
 ***
