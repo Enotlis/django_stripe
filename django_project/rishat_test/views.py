@@ -5,13 +5,15 @@ from django.conf import settings
 import stripe
 from .models import Item
 
-def get_item(request, item_id):
+def get_item(request, item_id: int):
+    '''Вернуть страницу с предметом'''
     item = Item.objects.get(pk=item_id)
     publish_key = settings.PUBLISH_STRIP_KEY
     context = {'item': item, 'item_id': item_id, 'pb_key': publish_key}
     return render(request, 'item.html', context)
 
-def buy_item(request, item_id):
+def buy_item(request, item_id: int):
+    '''Создание stripe сессии для покупки предмета'''
     stripe.api_key = settings.SECRET_STRIP_KEY
     item = Item.objects.get(pk=item_id)
     session = stripe.checkout.Session.create(
@@ -33,4 +35,5 @@ def buy_item(request, item_id):
     return JsonResponse({'session': session})
 
 def success(request):
+    '''Вернуть страницу успешной покупки'''
     return render(request, 'success.html')
